@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <title>Yu-Gi-Oh! Life Counter</title>
+</head>
+
+<body>
+    <div class="container">
+        
+        <div class="row">
+            <div class="col-md-4">
+                <div class="player">
+                    <h2>Jugador 1</h2>
+                    <p class="life-points">PUNTOS DE VIDA: <span id="player1Points">8000</span></p>
+                    <div class="inputs">
+                        
+                        <input type="number" id="player1AddPoints" placeholder="">
+                        <button class="btn btn-primary" onclick="addPoints('player1')">Sumar</button>
+                        
+                        <input type="number" id="player1SubtractPoints" placeholder="">
+                        <button class="btn btn-danger" onclick="subtractPoints('player1')">Restar</button>
+                        <button class="btn btn-secondary" onclick="restoreDefault('player1')">Restaurar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="player">
+                    <h2>Jugador 2</h2>
+                    <p class="life-points">PUNTOS DE VIDA: <span id="player2Points">8000</span></p>
+                    <div class="inputs">
+                        
+                        <input type="number" id="player2AddPoints" placeholder="">
+                        <button class="btn btn-primary" onclick="addPoints('player2')">Sumar</button>
+                        
+                        <input type="number" id="player2SubtractPoints" placeholder="">
+                        <button class="btn btn-danger" onclick="subtractPoints('player2')">Restar</button>
+                        <button class="btn btn-secondary" onclick="restoreDefault('player2')">Restaurar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="timer">
+                    <h2>Tiempo</h2>
+                    <p>TIEMPO: <span id="timer">45:00</span></p>
+                    <div class="inputs">
+                        <label for="timerDuration">Tiempo inicial:</label>
+                        <input type="number" id="timerDuration" placeholder="45">
+                        <button class="btn btn-secondary" onclick="setTimerDuration()">Aplicar</button>
+                    </div>
+                    <div class="buttons">
+                        <button class="btn btn-success" onclick="startTimer()">Comenzar</button>
+                        <button class="btn btn-danger" onclick="resetTimer()">Restaurar</button>
+                    </div>
+                </div>
+
+                <div class="settings">
+                    <div class="settings-options">
+                        <label for="player1StartingPoints">Jugador 1 puntos iniciales:</label>
+                        <input type="number" id="player1StartingPoints" value="8000">
+                        <button class="btn btn-secondary" onclick="setStartingPoints('player1')">Aplicar</button>
+                    </div>
+                    <div class="settings-options">
+                        <label for="player2StartingPoints">Jugador 2 puntos iniciales:</label>
+                        <input type="number" id="player2StartingPoints" value="8000">
+                        <button class="btn btn-secondary" onclick="setStartingPoints('player2')">Aplicar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
